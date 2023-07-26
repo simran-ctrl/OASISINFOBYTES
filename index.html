@@ -2,54 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=Calculator, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribute </title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-   <div class="calculator">
-    <form action="">
-        <div class="display">
-            <input type="text" name="display">
+        <div class="content">
+            <section class="top_section">
+                <div class="image_container">
+                    <img src="sir.jpg" alt="tribute">
+                </div>
+                <div>
+                    <h1>Sushant Singh Rajput</h1>
+                    <h4>1986 – 2020</h4>
+                </div>
+            </section>
+            <section class="about_section">
+                <h2>Favourite Actor</h2>
+                <p><b>Sushant Singh Rajput (21 January 1986 – 14 June 2020)</b> was an Indian actor known for his work in Hindi cinema.[2] He starred in a number of commercially successful Hindi films such as M.S. Dhoni: The Untold Story (2016), Kedarnath (2018) and Chhichhore (2019).[3] Due to his contribution to the film industry, he received a Screen Award and was nominated for the Filmfare Awards on three occasions. He appeared on Forbes India's Celebrity 100 list twice since 2017.[4][5]
+                 Rajput began his acting career after dropping out of his engineering course at the Delhi College of Engineering and entering the theatre industry in Mumbai. He moved on to feature in Hindi television serials, his debut show was the romantic drama Kis Desh Mein Hai Meraa Dil (2008), followed by the lead role in the soap opera Pavitra Rishta (2009–2011). He made his film debut with the film adaptation Kai Po Che! (2013) which became a critical and commercial success. He followed up with his starring roles as a tourist guide in the romantic comedy Shuddh Desi Romance (2013) and the titular detective in the action thriller Detective Byomkesh Bakshy! (2015).</p>
+            </section>
+            <section class="movie">
+                <h3>Movies</h3>
+<ul>
+    <li>Dil Bechara :Dil Bechara is scheduled to be released on 24 July, 2020.</li>
+    <li>Drive ::Drive is scheduled to be released on 01 November, 2019.</li>
+    <li>Sonchiriya :CHHICHHORE is the story of ‘loser’ friends trying to become winners and learning some important lessons on the way</li>
+    <li>Chhichhore :CHHICHHORE is the story of ‘loser’ friends trying to become winners and learning some important lessons on the way  </li>
+    <li>M.S. Dhoni - The Untold Story :The film traces his journey from being a school boy till the time he becomes the poster...</li>
+</ul>
+            </section>
+            <footer>
+                Read more about him <a href="https://en.wikipedia.org/wiki/Sushant_Singh_Rajput">Wikipedia</a>
+            </footer>
         </div>
-        <div >
-            <input type="button" class="operator" value="AC" onclick="display.value = '' ">
-            <input type="button" class="operator" value="DE" onclick="display.value =display.value.toString().slice(0,-1) ">
-            <input type="button"  class="operator" value="." onclick="display.value += '.' ">
-            <input type="button" class="operator" value="/" onclick="display.value += '/' ">
-        </div>
-
-        <div>
-            <input type="button" value="7" onclick="display.value += '7' ">
-            <input type="button" value="8" onclick="display.value += '8' ">
-            <input type="button" value="9" onclick="display.value += '9' ">
-            <input type="button" value="*" onclick="display.value += '*' " class="operator">
-        </div>
-
-        <div>
-            <input type="button" value="4" onclick="display.value += '4' ">
-            <input type="button" value="5" onclick="display.value += '5' ">
-            <input type="button" value="6" onclick="display.value += '6' ">
-            <input type="button" value="-" onclick="display.value += '-' " class="operator">
-        </div>
-
-        <div>
-            <input type="button" value="1" onclick="display.value += '1' ">
-            <input type="button" value="2" onclick="display.value += '2' ">
-            <input type="button" value="3" onclick="display.value += '3' ">
-            <input type="button" value="+" onclick="display.value += '+' " class="operator">
-        </div>
-
-        <div>
-            <input type="button" value="00" onclick="display.value += '00' ">
-            <input type="button" value="0" onclick="display.value += '0' ">
-            <input type="button" value="=" onclick=" display.value=eval(display.value)" class="equal operator">
-            
-        </div>
-    </form>
-   </div>
     </div>
-    <script src="app.js"></script>
+
+
+
+
 </body>
 </html>
