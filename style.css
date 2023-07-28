@@ -1,73 +1,134 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+	--dark: #374151;
+	--darker: #1F2937;
+	--darkest: #111827;
+	--grey: #6B7280;
+	--pink: #EC4899;
+	--purple: #8B5CF6;
+	--light: #EEE;
 }
-.container{
-    min-height: 100vh;
-    background-color: rgb(194, 184, 220);
-    border:10px solid #1b0835;
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Fira sans", sans-serif;
 }
-.content{
-    max-width: 900px;
-    margin: 0 auto;
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	color: #FFF;
+	background-color: var(--dark);
 }
-.image_container{
-    border-radius: 50%;
-    overflow: hidden;
-    
+header {
+	padding: 2rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
 }
-.image_container,
-img{
-   width: 300px;
-   height: 320px;
+header h1{ 
+	font-size: 2.5rem;
+	font-weight: 300;
+	color: var(--grey);
+	margin-bottom: 1rem;
 }
-.top_section h1{
-    font-size: 50px;
-    font-weight: bold;
-    color: #1d1e4c;
-    text-transform: uppercase;
+#new-task-form {
+	display: flex;;
 }
-.top_section{
-    margin-top: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+input, button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
 }
-.top_section h4{
-    /* text-align: end; */
-    margin-left: 40%;
-    font-size: 30px;
+#new-task-input {
+	flex: 1 1 0%;
+	background-color: var(--darker);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+	color: var(--light);
+	font-size: 1.25rem;
 }
-.about_section{
-    margin-top: 50px;
+#new-task-input::placeholder {
+	color: var(--grey);
 }
-.about_section h2{
-    font-size: 70px;
-    font-weight: 400;
-    margin-bottom: 20px;
+#new-task-submit {
+	color: var(--pink);
+	font-size: 1.25rem;
+	font-weight: 700;
+	background-image: linear-gradient(to right, var(--pink), var(--purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+	transition: 0.4s;
 }
-.about_section p{
-    font-size: 20px;
-    line-height: 30px;
-    letter-spacing: 1.2px;
-    text-align: justify;
+#new-task-submit:hover {
+	opacity: 0.8;
 }
-.movie{
-    margin: 50px 0;
+#new-task-submit:active {
+	opacity: 0.6;
 }
-.movie h3{
-    margin-bottom: 20px;
+main {
+	flex: 1 1 0%;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
 }
-.movie ul{
-    margin-left: 50px;
+.task-list {
+	padding: 1rem;
 }
-.movie li{
-    margin-bottom: 15px;
+.task-list h2 {
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: var(--grey);
+	margin-bottom: 1rem;
 }
-footer{
-    margin:50px 0;
+#tasks .task {
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--darkest);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
 }
-footer p{
-    text-align: end;
+#tasks .task .content {
+	flex: 1 1 0%;
+}
+
+#tasks .task .content .text {
+	color: var(--light);
+	font-size: 1.125rem;
+	width: 100%;
+	display: block;
+	transition: 0.4s;
+}
+#tasks .task .content .text:not(:read-only){
+    color: var(--pink);
+}
+.task .actions {
+	display: flex;
+	margin: 0 -0.5rem;
+}
+.task .actions button {
+	cursor: pointer;
+	margin: 0 0.5rem;
+	font-size: 1.125rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+.task .actions button:hover {
+	opacity: 0.8;
+}
+
+.task .actions button:active {
+	opacity: 0.6;
+}
+.task .actions .edit {
+	background-image: linear-gradient(to right, var(--pink), var(--purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.task .actions .delete {
+	color: crimson;
 }
